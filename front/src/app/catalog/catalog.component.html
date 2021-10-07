@@ -1,0 +1,137 @@
+<div class="custom">
+  <div class="custom__header">
+    <div class="custom__menu">
+      <div class="custom__custom">
+        <div class="custom__burger"></div>
+        <h1 class="custom__title">Catalog</h1>
+      </div>
+      <div class="custom__addCustom">
+        <div class="custom__plus"></div>
+        <p class="custom__titleAdd" (click)="addProduct()">Add Product</p>
+      </div>
+    </div>
+
+    <input
+      class="custom__search"
+      type="text"
+      placeholder="Product Code, Name..."
+      (input)="searchCatalog($event)"
+    >
+  </div>
+
+  <div class="custom__body">
+    <table mat-table [dataSource]="dataSource" matSort class="custom__table">
+
+      <!-- Position Column -->
+      <ng-container matColumnDef="productCode">
+        <th
+          mat-header-cell
+          *matHeaderCellDef mat-sort-header
+          class="custom__head"
+        > Product Code </th>
+        <td
+          mat-cell
+          *matCellDef="let element"
+          class="custom__text"
+        > {{element.productCode}} </td>
+      </ng-container>
+    
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <th
+          mat-header-cell
+          *matHeaderCellDef mat-sort-header
+          class="custom__head"
+        > Name </th>
+        <td
+          mat-cell
+          *matCellDef="let element"
+          class="custom__text"
+        > {{element.name}} </td>
+      </ng-container>
+    
+      <!-- Weight Column -->
+      <ng-container matColumnDef="unit">
+        <th
+          mat-header-cell
+          *matHeaderCellDef mat-sort-header
+          class="custom__head"
+        > Unit </th>
+        <td
+          mat-cell
+          *matCellDef="let element"
+          class="custom__text"
+        > {{element.unit}} </td>
+      </ng-container>
+    
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="price">
+        <th
+          mat-header-cell
+          *matHeaderCellDef mat-sort-header
+          class="custom__head"
+        > Price </th>
+        <td
+          mat-cell
+          *matCellDef="let element"
+          class="custom__text"
+        > {{element.price}} </td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="availability">
+        <th
+          mat-header-cell
+          *matHeaderCellDef mat-sort-header
+          class="custom__head"
+        > Availability </th>
+        <td
+          mat-cell
+          *matCellDef="let element"
+          class="custom__text"
+        > {{element.availability}} </td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="actions">
+        <th
+          mat-header-cell
+          *matHeaderCellDef mat-sort-header
+          class="custom__head"
+        > Actions </th>
+        <td
+          mat-cell
+          *matCellDef="let element"
+          class="custom__text"
+        > actions </td>
+      </ng-container>
+    
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <div *ngIf="(ELEMENT_DATA.length === 0)" class="custom__none">
+      <div class="custom__noneBlock">
+        <div class="custom__noneImg"></div>
+
+        <h3 class="custom__noneTitle">No Data to Display</h3>
+        <p class="custom__noneParagraph">
+          Seems like you don’t have any product yet. Let’s create it now!
+        </p>
+      </div>
+
+      <div class="custom__addCustom">
+        <div class="custom__plus"></div>
+        <p class="custom__titleAdd" (click)="addProduct()">Add Product</p>
+      </div>
+      </div>
+
+    <mat-paginator
+      [pageSizeOptions]="[5, 10, 15]"
+      showFirstLastButtons
+      aria-label="Select page of periodic elements"
+      class="custom__paginator"
+    >
+    </mat-paginator>
+  </div>
+</div>

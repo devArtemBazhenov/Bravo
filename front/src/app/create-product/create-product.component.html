@@ -1,0 +1,130 @@
+<div class="product">
+
+  <div class="product__body">
+    <div class="product__blockTitle">
+      <h2 class="product__title">Add Product</h2>
+      <div class="product__cancel" (click)="creatProduct(false)">X</div>
+    </div>
+
+    <div class="product__block">
+      <form class="product__inputs" [formGroup]="form">
+        <div class="product__blockInp">
+          <div class="product__input">
+            <label class="product__label">Product Code</label>
+            <input
+              [ngClass]="{
+                'product__text': true,
+                'invalidInput': this.form.touched && this.form.get('productCode')?.invalid
+              }"
+              placeholder="Product Code"
+              formControlName="productCode"
+              (input)="codeCreated = false"
+            >
+            <p
+              *ngIf="this.form.touched && this.form.get('productCode')?.invalid"
+              class="inalid_text"
+            >
+              Please input valid code
+            </p>
+
+            <p
+              *ngIf="codeCreated"
+              class="inalid_text"
+            >
+              This product code already exists in the system!
+            </p>
+          </div>
+    
+          <div class="product__input">
+            <label class="product__label">Name</label>
+            <input
+              [ngClass]="{
+                'product__text': true,
+                'invalidInput': this.form.touched && this.form.get('name')?.invalid
+              }"
+              placeholder="Name"
+              formControlName="name"
+            >
+            <p
+              *ngIf="this.form.touched && this.form.get('name')?.invalid"
+              class="inalid_text"
+            >
+              Please input name
+            </p>
+          </div>
+
+          <div class="product__doubleInp" *ngFor="let number of unitArray">
+            <div class="product__input">
+              <label class="product__label">Unit</label>
+              <input
+                [ngClass]="{
+                  'product__liteText': true,
+                  'invalidInput': this.form.touched && this.form.get('unit' + number)?.invalid
+                }"
+                [placeholder]="'Unit' + number"
+                [formControlName]="'unit' + number"
+              >
+            </div>
+
+            <div class="product__input">
+              <label class="product__label">Price (optional)</label>
+              <input
+                [ngClass]="{
+                  'product__liteText': true,
+                  'invalidInput': this.form.touched && this.form.get('price' + number)?.invalid,
+                  'addedInp': number !== unitArray[0]
+                }"
+                [placeholder]="'Price' + number"
+                [formControlName]="'price' + number"
+              >
+            </div>
+
+            <div class="trash" *ngIf="number !== unitArray[0]" (click)="deleteUnit(number)"></div>
+          </div>
+          <p
+            *ngIf="this.form.touched && (this.form.get('unit1')?.invalid || this.form.get('price1')?.invalid)"
+            class="inalid_text"
+          >
+            Please input this areas
+          </p>
+
+          <button
+            class="product__unit"
+            *ngIf="addUnitButton"
+            (click)="addUnit()"
+          >
+            Add Unit
+          </button>
+
+          <div class="product__input">
+            <label class="product__label">Availability</label>
+            <select class="product__select" (click)="selectAvailab($event)">
+              <option value="In stock" [selected]="true">In stock</option>
+              <option value="Out of stock">Out of stock</option>
+              <option value="Discontinued">Discontinued</option>
+            </select>
+          </div>
+        </div>
+      </form>
+
+      <div class="product__buttons">
+        <div class="product__line"></div>
+
+        <div class="product__blockButton">
+          <button class="product__buttonCancel" (click)="creatProduct(false)">Cancel</button>
+
+          <button
+            [ngClass]="{
+              'product__buttonConfirm': true,
+              'off': this.form.invalid
+            }"
+            [disabled]="this.form.invalid || codeCreated"
+            (click)="addProduct()"
+          >
+            Add Product
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

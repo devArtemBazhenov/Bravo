@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+}
+
+.autoriz {
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 440px;
+  height: 400px;
+
+  border: 1px solid #e0e0e0;
+  box-sizing: border-box;
+  border-radius: 8px;
+
+  &__title {
+    margin: 70px 0 26px 0;
+
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 132%;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 16px;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__email {
+    padding-left: 12px;
+
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 130%;
+    
+    letter-spacing: 0.03em;
+    
+    color: #616161;
+  }
+
+  &__input {
+    padding: 12px;
+    width: 344px;
+
+    border: 1px solid #a1a1a1;
+    box-sizing: border-box;
+    border-radius: 8px;
+
+    caret-color: #1672ec;
+  }
+
+  &__input:focus-visible {
+    outline: none;
+    border: 1px solid #1672ec;
+  }
+
+  .valid {
+    border: 1px solid #2ab930
+  }
+
+  .invalid {
+    border: 1px solid #f7716e
+  }
+
+  &__invalid {
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 130%;
+    
+    letter-spacing: 0.03em;
+    
+    color: #f5413d;
+  }
+
+  &__paragraph {
+    font-family: 'Manrope', sans-serif;
+    text-align: center;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 130%;
+    letter-spacing: 0.03em;
+
+    width: 200px;
+    height: 48px;
+
+    color: #414141;
+  }
+
+  &__button {
+    padding: 12px;
+    width: 344px;
+
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 150%;
+    
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
+    color: #c5dcfa;
+
+    background: #1672ec;
+    box-shadow: 0 1px 2px rgba(15, 86, 179, 0.2), 0 2px 4px rgba(15, 86, 179, 0.2);
+    border: none;
+    border-radius: 8px;
+  }
+
+  &__button:hover {
+    cursor: pointer;
+  }
+
+  .off {
+    opacity: 0.6;
+  }
+
+  .off:hover {
+    cursor: inherit;
+  }
+}

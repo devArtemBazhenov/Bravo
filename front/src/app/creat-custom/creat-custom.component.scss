@@ -1,0 +1,219 @@
+.custom {
+  position: absolute;
+  top: 10%;
+  left: 35%;
+
+  &__body {
+    padding: 22px 24px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+
+    background-color: #fff;
+    border-radius: 8px;
+  }
+
+  &__blockTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    gap: 197px;
+  }
+
+  &__title {
+    margin: 0;
+
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 132%;
+  }
+
+  &__cancel {
+    cursor: pointer;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+
+    gap: 22px;
+  }
+
+  &__inputs {
+    display: flex;
+    flex-direction: column;
+
+    gap: 29px;
+  }
+
+  &__blockInp {
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+  }
+
+  &__input,
+  &__bigInp {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label,
+  .inalid_text {
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 130%;
+    
+    letter-spacing: 0.03em;
+    
+    color: #616161;
+  }
+
+  .inalid_text {
+    color: red;
+  }
+
+  &__text,
+  &__bigInput {
+    padding: 12px;
+
+    width: 376;
+    height: 48px;
+    border: 1px solid #A1A1A1;
+    box-sizing: border-box;
+    border-radius: 8px;
+
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.0168em;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+  }
+
+  &__blockCheck {
+    display: flex;
+    flex-direction: column;
+
+    gap: 13px;
+  }
+
+  .invalidInput {
+    border: 1px solid red;
+  }
+
+  &__chekRow {
+    display: flex;
+    flex-direction: row;
+
+    gap: 25px;
+  }
+
+  &__checkColumn {
+    display: flex;
+    flex-direction: column;
+
+    gap: 26px;
+  }
+
+  &__checkBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    gap: 13px;
+  }
+
+  &__box {
+    width: 22px;
+    height: 22px;
+  }
+
+  &__labelBox {
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.0168em;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+  }
+
+  &__bigInput {
+    padding: 12px 0 0 12px;
+
+    height: 120px;
+    resize: none;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    gap: 32px;
+  }
+
+  &__line {
+    width: 100%;
+    border: 1px solid #E0E0E0;
+  }
+
+  &__blockButton {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    gap: 16px;
+  }
+
+  &__buttonCancel,
+  &__buttonConfirm {
+    padding: 12px 16px;
+    cursor: pointer;
+
+    border: 1px solid #c0c0c0;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background-color: #fff;
+
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 150%;
+
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
+
+    color: #616161;
+  }
+
+  &__buttonConfirm {
+    padding: 12px 16px 12px 52px;
+
+    color: #c5dcfa;
+    background: #1672EC;
+
+    box-shadow: 0px 1px 2px rgba(15, 86, 179, 0.2), 0px 2px 4px rgba(15, 86, 179, 0.2);
+    border-radius: 8px;
+  }
+
+  .off {
+    opacity: 0.6;
+  }
+}

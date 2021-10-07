@@ -1,0 +1,130 @@
+<div class="custom">
+
+  <div class="custom__body">
+    <div class="custom__blockTitle">
+      <h2 class="custom__title">Creat Customer</h2>
+      <div class="custom__cancel" (click)="createCustomer(false)">X</div>
+    </div>
+
+    <div class="custom__block">
+      <form class="custom__inputs" [formGroup]="form">
+        <div class="custom__blockInp">
+          <div class="custom__input">
+            <label class="custom__label">Your name</label>
+            <input
+              [ngClass]="{
+                'custom__text': true,
+                'invalidInput': this.form.touched && this.form.get('name')?.invalid
+              }"
+              placeholder="name"
+              formControlName="name"
+            >
+            <p
+              *ngIf="this.form.touched && this.form.get('name')?.invalid"
+              class="inalid_text"
+            >
+              Please input your name
+            </p>
+          </div>
+    
+          <div class="custom__input">
+            <label class="custom__label">Your adress where to delivery</label>
+            <input
+              [ngClass]="{
+                'custom__text': true,
+                'invalidInput': this.form.touched && this.form.get('adress')?.invalid
+              }"
+              placeholder="adress"
+              formControlName="adress"
+            >
+            <p
+              *ngIf="this.form.touched && this.form.get('adress')?.invalid"
+              class="inalid_text"
+            >
+              Please input your adress
+            </p>
+          </div>
+
+          <div
+            [ngClass]="{
+              'custom__blockCheck': true,
+              'invalidInput': this.form.touched && this.form.get('check')?.invalid
+            }">
+            <label class="custom__label">Delivery Days</label>
+
+            <div class="custom__chekRow">
+              <div class="custom__checkColumn">
+                <div class="custom__checkBox">
+                  <input type="checkbox" class="custom__box" formControlName="check" (click)="addDays('Mon')">
+                  <label class="custom__labelBox">Mon</label>
+                </div>
+                <div class="custom__checkBox">
+                  <input type="checkbox" class="custom__box" formControlName="check" (click)="addDays('Fri')">
+                  <label class="custom__labelBox">Fri</label>
+                </div>
+              </div>
+  
+              <div class="custom__checkColumn">
+                <div class="custom__checkBox">
+                  <input type="checkbox" class="custom__box" formControlName="check" (click)="addDays('Tue')">
+                  <label class="custom__labelBox">Tue</label>
+                </div>
+                <div class="custom__checkBox">
+                  <input type="checkbox" class="custom__box" formControlName="check" (click)="addDays('Sat')">
+                  <label class="custom__labelBox">Sat</label>
+                </div>
+              </div>
+  
+              <div class="custom__checkColumn">
+                <div class="custom__checkBox">
+                  <input type="checkbox" class="custom__box" formControlName="check" (click)="addDays('Wed')">
+                  <label class="custom__labelBox">Wed</label>
+                </div>
+                <div class="custom__checkBox">
+                  <input type="checkbox" class="custom__box" formControlName="check" (click)="addDays('Sun')">
+                  <label class="custom__labelBox">Sun</label>
+                </div>
+              </div>
+  
+              <div class="custom__checkColumn">
+                <div class="custom__checkBox">
+                  <input type="checkbox" class="custom__box" formControlName="check" (click)="addDays('Thu')">
+                  <label class="custom__labelBox">Thu</label>
+                </div>
+              </div>
+            </div>
+
+            <p
+              *ngIf="this.form.touched && this.form.get('check')?.invalid"
+              class="inalid_text"
+            >
+              Please select day
+            </p>
+          </div>
+        </div>
+    
+        <div *ngIf="false" class="custom__bigInp">
+          <label class="custom__label">Shortlisted Products</label>
+          <textarea class="custom__bigInput" placeholder="products"></textarea>
+        </div>
+      </form>
+
+      <div class="custom__buttons">
+        <div class="custom__line"></div>
+
+        <div class="custom__blockButton">
+          <button class="custom__buttonCancel" (click)="createCustomer(false)">Cancel</button>
+
+          <button
+            [ngClass]="{
+              'custom__buttonConfirm': true,
+              'off': this.form.invalid
+            }"
+            [disabled]="this.form.invalid"
+            (click)="addCustomer()"
+          >Add Customer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

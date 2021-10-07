@@ -1,0 +1,45 @@
+<div class="confirmMail">
+  <div class="confirmMail__block">
+    <h2 class="confirmMail__title">Please check your email</h2>
+    <p class="confirmMail__paragraph">
+      We use this login code so you don’t have
+      to remember or type in yet another long password
+    </p>
+
+    <div class="confirmMail__code">
+      <div *ngIf="!preparingVertifi" class="confirmMail__numbers">
+        <div class="confirmMail__inpBlock">
+          <label for="code" class="confirmMail__label">Your login code</label>
+          <input
+            type="text"
+            maxlength="3"
+            size="3"
+            id="code1"
+            autofocus
+            class="confirmMail__number"
+            (input)="onChangeFirst($event)"
+          >
+        </div>
+
+        <div class="confirmMail__caption">-</div>
+
+        <input
+          type="text"
+          maxlength="3"
+          size="3"
+          id="code2"
+          class="confirmMail__number"
+          (input)="onChangeLast($event)"
+        >
+      </div>
+
+      <mat-progress-spinner *ngIf="preparingVertifi" mode="indeterminate"></mat-progress-spinner>
+
+      <p class="confirmMail__paragraph">
+        We've sent a 6 digit login code to <span class="greyText">example@email.com</span>
+        <br>
+        Can't find it? Check your spam folder.
+      </p>
+    </div>
+  </div>
+</div>

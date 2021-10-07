@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+}
+
+.confirmMail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: relative;
+
+  &__logo {
+    margin-bottom: 40px;
+  }
+
+  &__block {
+    padding: 37px 48px 32px 48px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border: 1px solid #E0E0E0;
+    box-sizing: border-box;
+    border-radius: 8px;
+
+    position: relative;
+  }
+
+  &__title {
+    margin-bottom: 11px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 132%;
+  }
+
+  &__paragraph {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 142%;
+
+    width: 344px;
+
+    text-align: center;
+    letter-spacing: 0.0168em;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    
+    color: #414141;
+  }
+
+  &__code {
+    margin: 48px 0 104px 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 24px;
+  }
+
+  &__code &__paragraph {
+    font-size: 12px;
+    line-height: 130%;
+
+    text-align: center;
+    letter-spacing: 0.03em;
+  }
+
+  &__numbers {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    gap: 20px;
+  }
+
+  &__number {
+    padding: 0 5px 0 5px;
+
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 132%;
+  }
+
+  &__caption {
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 138%;
+    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.0075em;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+  }
+
+  &__line {
+    position: absolute;
+    left: 0;
+    bottom: 118px;
+    right: 0;
+
+    border: 1px solid #E0E0E0;
+  }
+
+  .blueText {
+    color: #1672ec;
+  }
+}

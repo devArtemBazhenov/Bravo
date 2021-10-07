@@ -1,0 +1,164 @@
+.horizontal {
+  display: flex;
+  flex-direction: row;
+
+  position: relative;
+}
+
+.logo {
+  margin: 20px;
+  margin-bottom: 48px;
+
+  background-image: url(../images/Union.png);
+  background-repeat: no-repeat;
+  width: 110px;
+  height: 40px;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 22px;
+}
+
+.listLink,
+.button {
+  padding: 12px;
+  padding-left: 64px;
+
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 150%;
+  text-decoration: none;
+  color: #414141;
+
+  letter-spacing: 0.005em;
+  font-feature-settings: 'tnum' on, 'lnum' on;
+}
+
+.activeLink {
+  background: #C5DCFA;
+  color: #1672ec;
+  border-radius: 0 12px 12px 0;
+}
+
+.link1 {
+  padding-right: 123px;
+}
+
+.link2 {
+  padding-right: 114px;
+}
+
+.link3 {
+  padding-right: 89px;
+}
+
+.footer {
+  position: relative;
+}
+
+.button {
+  margin-top: 500px;
+  padding: 15px 110px 15px 64px;
+
+  border: none;
+  background-color: white;
+}
+
+.button:hover,
+.listLink:hover,
+.listItem:hover .listLink,
+.badges:hover .listLink {
+  cursor: pointer;
+
+  background: #C5DCFA;
+  color: #1672ec;
+  border-radius: 0 12px 12px 0;
+}
+
+.badges {
+  position: absolute;
+  left: 21px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.badges:hover {
+  cursor: pointer;
+}
+
+//shop
+.shop {
+  background-image: url(../images/Badges/shopping-cart.png);
+  width: 21px;
+  height: 20px;
+}
+
+.listItem:hover .shop {
+  background-image: url(../images/Badges/shopping-cart-active.png);
+}
+
+.activeShop {
+  background-image: url(../images/Badges/shopping-cart-active.png);
+}
+
+//tag
+.tag {
+  background-image: url(../images/Badges/tag.png);
+  width: 21px;
+  height: 14px;
+}
+
+.listItem:hover .tag {
+  background-image: url(../images/Badges/tag-active.png);
+}
+
+.activeTag {
+  background-image: url(../images/Badges/tag-active.png);
+}
+
+//user
+.user {
+  background-image: url(../images/Badges/user.png);
+  width: 14px;
+  height: 18px;
+}
+
+.listItem:hover .user {
+  background-image: url(../images/Badges/user-active.png);
+}
+
+.activeUser {
+  background-image: url(../images/Badges/user-active.png);
+}
+
+//logout
+.logout {
+  background-image: url(../images/Badges/log-out.png);
+  bottom: 18px;
+
+  width: 19px;
+  height: 16px;
+}
+
+.back {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  background-color: darkgray;
+  opacity: 0.5;
+}

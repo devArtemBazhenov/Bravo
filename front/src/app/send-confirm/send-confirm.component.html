@@ -1,0 +1,39 @@
+<div class="confirmMail">
+  <h1 class="confirmMail__logo">Bravo</h1>
+
+  <div class="confirmMail__block">
+    <h2 class="confirmMail__title">Let’s get you signed in</h2>
+    <p class="confirmMail__paragraph">
+      We use this login code so you don’t have
+      to remember or type in yet another long password
+    </p>
+
+    <div class="confirmMail__code">
+      <div class="confirmMail__numbers">
+        <div
+          *ngFor="let num of code.slice(0, 3).split('')"
+          class="confirmMail__number"
+        >
+          {{num}}
+        </div>
+
+        <div class="confirmMail__caption">-</div>
+
+        <div
+          *ngFor="let num of code.slice(3).split('')"
+          class="confirmMail__number"
+        >
+          {{num}}
+        </div>
+      </div>
+      <p class="confirmMail__paragraph">Note that this code is only valid for 15 minutes.</p>
+    </div>
+
+    <div class="confirmMail__line"></div>
+
+    <p class="confirmMail__paragraph">
+      If you have any question, don’t hesitate <br>
+      to contact us via <span class="blueText">contact@orderbravo.com</span>
+    </p>
+  </div>
+</div>

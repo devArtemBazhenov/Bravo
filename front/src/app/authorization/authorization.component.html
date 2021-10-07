@@ -1,0 +1,43 @@
+<div class="autoriz">
+  <h2 class="autoriz__title">Log In</h2>
+
+  <form
+    class="autoriz__form"
+    [formGroup]="form"
+  >
+    <div class="autoriz__block">
+      <label class="autoriz__email" for="reg">Your Email</label>
+      <input
+        id="reg" name="reg"
+        type="email"
+        placeholder="email@example.com"
+        formControlName="email"
+        [ngClass]="{
+          'autoriz__input': true,
+          'valid': this.form.touched && this.form.valid,
+          'invalid': this.form.touched && this.form.invalid
+        }"
+      >
+
+      <p
+        *ngIf="this.form.touched && this.form.invalid"
+        class="autoriz__invalid"
+      >
+        This email invalid
+      </p>
+    </div>
+
+    <p class="autoriz__paragraph">Enter the email you signed up with to receive your login code</p>
+
+    <button
+      [ngClass]="{
+        'autoriz__button': true,
+        'off': this.form.invalid
+      }"
+      [disabled]="this.form.invalid"
+      (click)="authorization()"
+    >
+      Log In
+    </button>
+  </form>
+</div>

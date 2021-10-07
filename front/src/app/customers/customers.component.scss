@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.custom {
+  padding: 28px 20px 0 20px;
+
+  background-color: rgb(248, 248, 248);
+
+  &__header {
+    margin-bottom: 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 24px;
+  }
+
+  &__menu {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__custom,
+  &__addCustom {
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+
+    gap: 18px;
+  }
+
+  &__addCustom {
+    gap: 12px;
+  }
+
+  &__title {
+    margin: 0;
+
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 132%;
+  }
+
+  &__titleAdd {
+    margin: 0;
+
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 150%;
+
+    width: max-content;
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
+    
+    color: #1672EC;
+  }
+
+  &__search {
+    padding-left: 48px;
+
+    width: 350px;
+    height: 40px;
+  }
+
+  //table
+  &__table {
+    width: 100%;
+
+    background-color: #fff;
+    border: 1px solid #E0E0E0;
+    box-sizing: border-box;
+    border-radius: 8px;
+  }
+
+  .mat-column-numer {
+    width: 172px;
+
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .mat-column-name {
+    width: 316px;
+
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .mat-column-adress {
+    width: 432px;
+
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .mat-column-days {
+    width: 208px;
+
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  &__head,
+  &__text {
+    color: #000;
+  }
+
+  &__paginator {
+    background-color: #fff;
+    color: #616161;
+  }
+
+  //noneBlock
+  &__none {
+    margin-top: 50px;
+    margin-bottom: 57px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__noneBlock {
+    margin-bottom: 48px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 8px;
+  }
+
+  &__noneImg {
+    background-image: url(../../images/noneContent.png);
+    background-repeat: no-repeat;
+    width: 120px;
+    height: 120px;
+  }
+
+  &__noneTitle {
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 138%;
+
+    letter-spacing: 0.0075em;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+
+    color: #414141;
+  }
+
+  &__noneParagraph {
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 142%;
+
+    text-align: center;
+    width: 254px;
+
+    letter-spacing: 0.0168em;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+
+    color: #818181;
+  }
+}
+
+:host::ng-deep {
+  .custom__paginator .mat-select-value,
+  .custom__paginator .mat-select-arrow {
+    color: #616161;
+  }
+
+  .custom__paginator .mat-option {
+    background-color: #dddddd;
+  }
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}

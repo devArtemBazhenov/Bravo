@@ -1,0 +1,97 @@
+<!--Horizontal header-->
+<div *ngIf="!verticalVisible" class="vertical">
+  <div>
+    <a routerLink="/order" (click)="onSelect('order')">
+      <div class="logo"></div>
+    </a>
+  </div>
+  
+  <router-outlet></router-outlet>
+</div>
+
+<!--Vertical header-->
+<div *ngIf="verticalVisible" class="horizontal">
+  <div class="body">
+    <a routerLink="/order" (click)="onSelect('order')">
+      <div class="logo"></div>
+    </a>
+
+    <nav class="nav">
+      <ul class="list">
+        <li class="listItem">
+          <div [ngClass]="{
+            'badges': true,
+            'shop': true,
+            'activeShop': selectOrder
+            }"
+            routerLink="/order"
+            (click)="onSelect('order')"
+          ></div>
+
+          <a [ngClass]="{
+            'listLink': true,
+            'link1': true,
+            'activeLink': selectOrder
+            }"
+            routerLink="/order"
+            (click)="onSelect('order')"
+          >Orders</a>
+        </li>
+
+        <li class="listItem">
+          <div [ngClass]="{
+            'badges': true,
+            'tag': true,
+            'activeTag': selectCatalog
+            }"
+            routerLink="/catalog"
+            (click)="onSelect('catalog')"
+          ></div>
+
+          <a [ngClass]="{
+            'listLink': true,
+            'link2': true,
+            'activeLink': selectCatalog
+            }"
+            routerLink="/catalog"
+            (click)="onSelect('catalog')"
+          >Catalog</a>
+        </li>
+
+        <li class="listItem">
+          <div [ngClass]="{
+            'badges': true,
+            'user': true,
+            'activeUser': selectCustom
+            }"
+            routerLink="/customers"
+            (click)="onSelect('customers')"
+          ></div>
+
+          <a [ngClass]="{
+            'listLink': true,
+            'link3': true,
+            'activeLink': selectCustom
+            }"
+            routerLink="/customers"
+            (click)="onSelect('customers')"
+          >Customers</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="footer">
+      <div class="badges logout"></div>
+      <button class="button" (click)="logout()">Log Out</button>
+    </div>
+  </div>
+
+  <router-outlet></router-outlet>
+</div>
+
+<!--Creat custom icon-->
+<div class="back" *ngIf="createdCustomer" (click)="createCustomer(false)"></div>
+<app-creat-custom *ngIf="createdCustomer"></app-creat-custom>
+
+<div class="back" *ngIf="createdProduct" (click)="createProduct(false)"></div>
+<app-create-product *ngIf="createdProduct"></app-create-product>

@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+}
+
+.confirmMail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: relative;
+
+  &__logo {
+    margin-bottom: 40px;
+  }
+
+  &__block {
+    padding: 37px 48px 0 48px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border: 1px solid #E0E0E0;
+    box-sizing: border-box;
+    border-radius: 8px;
+  }
+
+  &__title {
+    margin-bottom: 11px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 132%;
+  }
+
+  &__paragraph {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 142%;
+
+    width: 344px;
+
+    text-align: center;
+    letter-spacing: 0.0168em;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    
+    color: #414141;
+  }
+
+  &__code {
+    margin: 48px 0 79px 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 24px;
+  }
+
+  &__code &__paragraph {
+    font-size: 12px;
+    line-height: 130%;
+
+    text-align: center;
+    letter-spacing: 0.03em;
+  }
+
+  &__numbers {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    gap: 20px;
+  }
+
+  &__inpBlock {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    margin-top: -15px;
+    padding-left: 12px;
+
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 130%;
+    
+    letter-spacing: 0.03em;
+    
+    color: #616161;
+  }
+
+  &__number {
+    padding-left: 1em;
+    width: 141px;
+    height: 48px;
+
+    border: 1px solid #A1A1A1;
+    box-sizing: border-box;
+    border-radius: 8px;
+
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 132%;
+
+    caret-color: #1672ec;
+
+    letter-spacing: 1em
+  }
+
+  &__number:focus-visible {
+    outline: none;
+    border: 1px solid #1672EC;
+  }
+
+  &__caption {
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 138%;
+    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.0075em;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+  }
+
+  .greyText {
+    color: #1f1f1f;
+  }
+}
